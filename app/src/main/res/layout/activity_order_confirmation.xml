@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="16dp"
+    android:orientation="vertical"
+    android:background="@drawable/white_gradient"
+    tools:context=".OrderConfirmationActivity">
+
+    <TextView
+        android:id="@+id/textViewOrderConfirmation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Order Confirmation"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="16dp" />
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/greenTickImageView"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_below="@+id/textViewOrderConfirmation"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/greentick_image"
+        app:riv_oval="true"
+        android:scaleType="centerCrop" />
+
+    <TextView
+        android:id="@+id/textViewOrderNumberLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Order Number:"
+        android:textSize="18sp"
+        android:layout_below="@id/greenTickImageView" />
+
+    <TextView
+        android:id="@+id/textViewOrderNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#FF0000"
+        android:textSize="18sp"
+        android:layout_toRightOf="@id/textViewOrderNumberLabel"
+        android:layout_below="@id/textViewOrderConfirmation"
+        android:layout_marginStart="8dp" />
+
+    <TextView
+        android:id="@+id/textViewOrderDetails"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Order Details:"
+        android:textSize="18sp"
+        android:layout_below="@id/textViewOrderNumberLabel"
+        android:layout_marginTop="16dp" />
+
+    <TextView
+        android:id="@+id/textViewOrderItems"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:layout_below="@id/textViewOrderDetails"
+        android:layout_marginTop="8dp" />
+
+    <TextView
+        android:id="@+id/textViewTotalAmountLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total Amount:"
+        android:textSize="18sp"
+        android:layout_below="@id/textViewOrderItems"
+        android:layout_marginTop="16dp" />
+
+    <TextView
+        android:id="@+id/textViewTotalAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:layout_toRightOf="@id/textViewTotalAmountLabel"
+        android:layout_below="@id/textViewOrderItems"
+        android:layout_marginStart="8dp" />
+
+    <TextView
+        android:id="@+id/textViewShippingAddressLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Shipping Address: "
+        android:textSize="18sp"
+        android:layout_below="@id/textViewTotalAmountLabel"
+        android:layout_marginTop="16dp" />
+
+    <TextView
+        android:id="@+id/textViewShippingAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:layout_below="@id/textViewShippingAddressLabel"
+        android:layout_marginStart="8dp" />
+
+    <Button
+        android:id="@+id/buttonFinish"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Finish"
+        android:background="@drawable/second_gray_border"
+        android:textAllCaps="true"
+        android:textSize="18sp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="16dp" />
+
+</RelativeLayout>
